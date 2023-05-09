@@ -6,8 +6,6 @@ router.post('/register',userCtrl.registerUser)
 router.post('/login',userCtrl.loginUser)
 
 //VERIFY TOKEN
-router.get('/verify',auth,(req,res)=>{
-    console.log(req.user)
-})
+router.get('/verify',userCtrl.verifiedToken)
 
 module.exports=router
