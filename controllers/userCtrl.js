@@ -32,7 +32,7 @@ const userCtrl = {
 
             // if login success create token
             const payload = {id: user._id, name: user.username}
-            const token = jwt.sign(payload, process.env.TOKEN_SECRET, {expiresIn: "1d"})
+            const token = jwt.sign(payload, process.env.TOKEN_SECRET, {expiresIn: "10d"})
 
             res.json({token})
         } catch (err) {
